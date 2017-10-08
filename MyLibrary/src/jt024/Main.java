@@ -7,6 +7,13 @@ package jt024;
 
 import java.util.Random;
 
+import static jt024.Toolkit.Randoms.*;
+
+
+
+
+
+
 /**
  *
  * @author Trevi
@@ -20,17 +27,62 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+       
+        String newGirl;
+        String newBoy;        
         
-        size = 100;
-        range = 1000000;
-        makeArray(size,range);
-//        printArray(numbers);
-        Toolkit.integerArray = numbers;        
-        Toolkit.Sort.quick(0,numbers.length-1);
-        printArray(numbers);        
+        
+        for (int i = 0; i < 10; i++) {
+            newGirl = RandomName.getFFull();
+            newBoy = RandomName.getMFull();
+            System.out.println(newGirl);
+            System.out.println(newBoy);
+        }
+
+        
+        
+        
+        // <editor-fold defaultstate="collapsed" desc="**LinkedList Testing**">          
+//        Queue numQueue = new Queue();
+//        Queue StringQueue = new Queue();
+//        String testInteger = "1";
+//        Random rn = new Random();
+//        
+//        for (int i = 0; i < 50; i++) {
+//            numQueue.addLink(rn.nextInt(100));
+//        }
+        
+
+        // </editor-fold>        
+        
+        
+        // <editor-fold defaultstate="collapsed" desc="**Array Testing**">         
+//        size = 100;
+//        range = 1000000;
+//        makeArray(size,range);
+////      printArray(numbers);
+//        Toolkit.integerArray = numbers;        
+//        Toolkit.Sort.quick(0,numbers.length-1);
+//        printArray(numbers);        
+
+        // </editor-fold>
+
+        // <editor-fold defaultstate="collapsed" desc="**Validation Testing**">        
+        if (Toolkit.Validate.validInteger("user in",1, 9)) 
+            System.out.println("It's good");
+         else
+            System.out.println("It's no good");
+        // </editor-fold>        
+
+
+    
+        
+
+
+        
         
     }
-  
+    // <editor-fold defaultstate="collapsed" desc="**Testing Methods**">  
     private static void makeArray(int size, int range){
         // create integerArray integer array
         numbers = new int[size];
@@ -155,6 +207,8 @@ public class Main {
         
         
     }
-    
+
+
+    // </editor-fold>    
     
 }
